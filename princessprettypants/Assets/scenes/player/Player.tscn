@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://do7q38sk5bieq"]
+
+[ext_resource type="Script" uid="uid://dhny6nfnusany" path="res://Assets/scripts/player/Movement.gd" id="1_kjxbu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fvsj2"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kjxbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fvsj2")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-10, -16)
+scale = Vector2(1, 1.06667)
+polygon = PackedVector2Array(21, 0, 21, 30, 0, 30, 0, 0)

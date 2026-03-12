@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx6wec82088ud"]
+
+[ext_resource type="PackedScene" uid="uid://do7q38sk5bieq" path="res://Assets/scenes/player/Player.tscn" id="1_oxhw5"]
+
+[node name="Test_Level" type="Node2D"]
+
+[node name="Floor" type="Polygon2D" parent="."]
+color = Color(0.589096, 0.589096, 0.589096, 1)
+polygon = PackedVector2Array(-2, -4, 1149, -3, 1157, 643, -2, 647)
+
+[node name="Player" parent="." instance=ExtResource("1_oxhw5")]
+position = Vector2(518, 257)
+friction = 0.515
