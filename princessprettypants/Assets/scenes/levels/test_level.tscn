@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx6wec82088ud"]
+[gd_scene load_steps=3 format=3 uid="uid://dx6wec82088ud"]
 
 [ext_resource type="PackedScene" uid="uid://do7q38sk5bieq" path="res://Assets/scenes/player/Player.tscn" id="1_oxhw5"]
+[ext_resource type="Script" uid="uid://oi4g05x0cw0m" path="res://Assets/scripts/Playermovement/Movement.gd" id="2_wukkw"]
 
 [node name="Test_Level" type="Node2D"]
 
@@ -10,4 +11,9 @@ polygon = PackedVector2Array(-2, -4, 1149, -3, 1157, 643, -2, 647)
 
 [node name="Player" parent="." instance=ExtResource("1_oxhw5")]
 position = Vector2(518, 257)
-friction = 0.515
+script = ExtResource("2_wukkw")
+max_speed = 200.0
+acceleration_rate = 10.0
+deceleration_rate = 14.0
+acceleration_curve_power = 1.5
+deceleration_curve_power = 1.0
